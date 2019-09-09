@@ -7,11 +7,11 @@ The ratio between all lines in script and all touched lines is a main coverage c
 
 The required information is provided by [SebastianBergmann\CodeCoverage](https://github.com/sebastianbergmann/php-code-coverage), and you can use any of the supported drivers.
 
-| Driver | Description |
-| --- | --- |
-| [Xdebug](https://github.com/xdebug/xdebug) | Great for debugging, but too slow when collecting coverage |
-| [phpdbg](https://www.php.net/manual/en/book.phpdbg.php) | Faster than `Xdebug` but inaccurate |
-| [pcov](https://github.com/krakjoe/pcov) | Fast and accurate, but no debug functionality &mdash; perfect for CI |
+| Driver | Description | PHP Version |
+| --- | --- | --- |
+| [Xdebug](https://github.com/xdebug/xdebug) | Great for debugging, but too slow when collecting coverage | [See Xebug Docs](https://xdebug.org/docs/install#versions) |
+| [phpdbg](https://www.php.net/manual/en/book.phpdbg.php) | Faster than `Xdebug` but inaccurate | All |
+| [pcov](https://github.com/krakjoe/pcov) | Fast and accurate, but no debug functionality &mdash; perfect for CI | 7.2+ |
 
 ![Code Coverage Example](http://codeception.com/images/coverage.png)
 
@@ -86,7 +86,7 @@ codecept run --coverage --coverage-xml --coverage-html
 XML and HTML reports are stored to the `_output` directory. The best way to review report is to open `index.html` from `tests/_output/coverage` in your browser.
 XML clover reports are used by IDEs (like PHPStorm) or Continuous Integration servers (like Jenkins).
 
-## Remote CodeCoverage
+## Remote CodeCoverage - Xdebug only
 
 ### Local Server
 
